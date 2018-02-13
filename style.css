@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.logo img {
+  width: 100px;
+  margin-bottom: 8px;
+}
+body {
+  font-family: roboto, sans-serif;
+  line-height: 1.5em;
+}
+a {
+  color: black;
+}
+h2 {
+  font-size: 20px;
+}
+p {
+  margin: 8px 0px;
+}
+h4 {
+  font-weight: normal;
+}
+.container {
+  display: flex;
+}
+.leftSidebar {
+  color: #f1edee;
+  background: #305467;
+  font-weight: bold;
+  padding: 16px;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.7;
+}
+.content {
+  flex: 2;
+  background: #333533;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginScreen {
+  width: 90%;
+  display: flex;
+}
+.logo {
+  color: #f1edee;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  background: #000;
+}
+.main {
+  flex: 1.5;
+  text-align: center;
+  padding: 8px;
+  background: #f4f0bb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main h2::after {
+  display: block;
+  content: "";
+  background: rgb(49, 45, 45);
+  height: 2px;
+  width: 64px;
+  opacity: 0.7;
+  margin: 16px auto;
+}
+.main form {
+  margin: 16px 0px;
+  width: 90%;
+}
+.main input {
+  width: 100%;
+  border: 1px solid rgb(100, 99, 99);
+  height: 32px;
+}
+.main .btn-continue {
+  height: 32px;
+  width: 90%;
+  background: #0075c4;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.main .btn-continue:hover {
+  background: rgb(8, 142, 231);
+}
+.main p {
+  font-size: 14px;
+}
+
+@media (max-width: 550px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .loginScreen {
+    flex-direction: column;
+  }
+  .logo {
+    order: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+  }
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+  .leftSidebar {
+    flex: 0.3;
+  }
+  h1 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
